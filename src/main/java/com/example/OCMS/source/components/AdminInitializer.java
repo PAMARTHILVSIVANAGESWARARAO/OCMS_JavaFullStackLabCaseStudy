@@ -16,10 +16,10 @@ public class AdminInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Check if admin already exists using the boolean query
-        if (!userRepository.existsByNameAndPassword("admin", "admin")) {
+        if (!userRepository.existsByNameAndPassword("admin", "$2a$12$wTdIa1oHj6b6kdYkhIv/ve3aPGhShRdg4w6XYUdQZCvIiRhbub63a")) {
             UserModel admin = new UserModel();
             admin.setName("admin");
-            admin.setPassword("admin");
+            admin.setPassword("$2a$12$wTdIa1oHj6b6kdYkhIv/ve3aPGhShRdg4w6XYUdQZCvIiRhbub63a");
             admin.setEmail("admin@ocms.com");
             admin.setContact("1234567890");
             admin.setRole("admin");
